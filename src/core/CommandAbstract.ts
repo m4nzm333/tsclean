@@ -1,7 +1,7 @@
 import { validate } from "class-validator";
 import { CommandInterface } from "./CommandInterface";
 
-export default abstract class CommandAbstract<Request>
+export abstract class CommandAbstract<Request>
   implements CommandInterface<Request>
 {
   async validate(req: Request) {
