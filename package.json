@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Interface for clean arch for personal use",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m4nzm333/tsclean.git"
+  },
   "scripts": {
     "build": "tsc && tsc-alias",
     "prebuild": "rimraf dist",
