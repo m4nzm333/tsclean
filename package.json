@@ -1,6 +1,6 @@
 {
   "name": "@m4nzm333/tsclean",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Interface for clean arch for personal use",
   "main": "index.js",
   "repository": {
@@ -24,6 +24,7 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "class-validator": "^0.14.1"
+    "class-validator": "^0.14.1",
+    "pino": "^9.5.0"
   }
 }
