@@ -1,0 +1,22 @@
+{
+  "name": "@m4nzm333/tsclean",
+  "version": "0.0.1",
+  "description": "Interface for clean arch for personal use",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "prebuild": "rimraf dist",
+    "postbuild": "cp package.json README.md dist"
+  },
+  "keywords": [
+    "clean"
+  ],
+  "author": "m4nzm333",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "rimraf": "^6.0.1",
+    "tsc-alias": "^1.8.10",
+    "typescript": "^5.7.2"
+  }
+}
