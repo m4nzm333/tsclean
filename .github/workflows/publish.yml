@@ -1,0 +1,22 @@
+name: Publish Package to npmjs
+run-name: ${{ github.actor }} is Publishing Package to npmjs with version ${{ github.ref_name }}
+on:
+  push:
+    tags: ["*"]
+  release:
+    types: [published]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+          registry-url: "https://registry.npmjs.org"
+      - run: npm install
+      - run: npm run build
+      - run: npm publish dist/ --access=public
+    env:
+      NPM_TOKEN: $NPM_TOKEN
