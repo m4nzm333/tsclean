@@ -4,36 +4,12 @@ export abstract class Entity<T> {
   constructor(props?: T) {
     this.props = props;
   }
-}
 
-export function getter(target: unknown, propertyKey: string) {
-  let value: unknown;
-  // Define getter for the property
-  Object.defineProperty(target, propertyKey, {
-    get() {
-      return value;
-    },
-    set(newValue: unknown) {
-      console.log(`Setting ${propertyKey} to: ${newValue}`);
-      value = newValue;
-    },
-    enumerable: true,
-    configurable: true,
-  });
-}
+  toJSON(): T | undefined {
+    return this.props;
+  }
 
-export function setter(target: unknown, propertyKey: string) {
-  let value: unknown;
-  // Define setter for the property
-  Object.defineProperty(target, propertyKey, {
-    get() {
-      return value;
-    },
-    set(newValue: unknown) {
-      console.log(`Setting ${propertyKey} to: ${newValue}`);
-      value = newValue;
-    },
-    enumerable: true,
-    configurable: true,
-  });
+  toString(): string | undefined {
+    return this.props?.toString();
+  }
 }
