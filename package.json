@@ -1,6 +1,6 @@
 {
   "name": "@m4nzm333/tsclean",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Interface for clean arch for personal use",
   "main": "index.js",
   "repository": {
