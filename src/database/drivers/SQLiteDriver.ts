@@ -3,7 +3,7 @@ import { Sequelize } from "@sequelize/core";
 import { SqliteDialect } from "@sequelize/sqlite3";
 
 @singleton()
-export default class SQLiteDriver {
+export class SQLiteDriver {
   sequilize: Sequelize;
   async init(location: string, models: Array<any>) {
     this.sequilize = new Sequelize({
