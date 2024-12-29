@@ -24,7 +24,10 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "@sequelize/core": "^7.0.0-alpha.43",
+    "@sequelize/sqlite3": "^7.0.0-alpha.43",
     "class-validator": "^0.14.1",
-    "pino": "^9.5.0"
+    "pino": "^9.5.0",
+    "tsyringe": "^4.8.0"
   }
 }
